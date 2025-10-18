@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+.hyperqual-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.animation-container {
+  width: 500px;
+  max-width: 80%;
+}
+
+.hyperqual-text {
+  position: absolute;
+  text-align: center;
+}
+
+.hyperqual-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #00ffdd;
+}
+
+.hyperqual-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ffffff;
+}

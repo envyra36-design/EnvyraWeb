@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envyra - Contacto</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">ENVYRΛ</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="presentación.html">Presentación</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="contacto-header" data-aos="fade-up">
+  <h1>ENVYRA CONTACTS</h1>
+  <p>Elegí cómo querés comunicarte con nuestro equipo:</p>
+</header>
+
+<section class="pricing-section" data-aos="fade-up">
+  <div class="pricing-cards">
+    <!-- Opción Email -->
+    <div class="pricing-card">
+      <h3><i class="fa-solid fa-envelope"></i> Enviar Email</h3>
+      <p>Completá el formulario y nuestro equipo te responderá rápidamente.</p>
+      <a href="#contacto" class="btn">Ir al Formulario</a>
+    </div>
+
+    <!-- Opción Chat -->
+    <div class="pricing-card">
+      <h3><i class="fa-solid fa-comments"></i> Chat en Vivo</h3>
+      <p>Iniciá una conversación instantánea con nuestro asistente ENVYRA Assistant.</p>
+      <button class="btn" onclick="Tawk_API.toggle()">Abrir Chat</button>
+    </div>
+  </div>
+</section>
+
+<!-- Formulario de contacto -->
+<div class="container">
+  <section id="contacto" data-aos="fade-up">
+    <form id="contactForm">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="name" required>
+
+      <label for="emailUser">Email:</label>
+      <input type="email" id="emailUser" name="email" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="message" rows="5" placeholder="Escribe tu consulta o comentario." required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="respuesta"></p>
+  </section>
+</div>
+
+<footer>
+  <p class="footer-text">&copy; 2025 ENVYRA™. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+</script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){ emailjs.init("3WGsG8ROJ169fINUj"); })();
+
+  const form = document.getElementById("contactForm");
+  const respuesta = document.getElementById("respuesta");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    emailjs.sendForm('service_y5ndf79','template_w4jkr4y',this)
+      .then(()=>{
+        respuesta.textContent = "¡Mensaje enviado con éxito!";
+        respuesta.classList.add("show");
+        form.reset();
+        setTimeout(()=>respuesta.classList.remove("show"),4000);
+      }, (error)=>{
+        respuesta.textContent = "Error al enviar. Intenta de nuevo.";
+        respuesta.classList.add("show");
+        setTimeout(()=>respuesta.classList.remove("show"),4000);
+      });
+  });
+</script>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  menuToggle.addEventListener('click',()=>navLinks.classList.toggle('show'));
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click',()=>navLinks.classList.remove('show')));
+</script>
+
+<!-- Tawk.to -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/YOUR_TAWK_ID/1';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+</body>
+</html>

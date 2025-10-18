@@ -1,0 +1,2157 @@
+@font-face {
+    font-family: "Separat Regular";
+    src: url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.eot");
+    src: url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.svg#Separat Regular")format("svg");
+}
+
+.mod-bold{
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #111;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 100vh; 
+  }
+
+  .contenido {
+    padding: 15px;
+    top: 40%; /* más abajo en móviles */
+    transform: translateY(-40%);
+  }
+
+  .contenido h1 {
+    font-size: 1.8rem;
+  }
+
+  .contenido p {
+    font-size: 1rem;
+  }
+
+  .video-fondo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* o ajustalo a la altura que quieras */
+  overflow: hidden;
+}
+
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.texto-animado {
+  opacity: 0;
+  transform: translateY(20px); /* se coloca más abajo inicialmente */
+  animation: elevarTexto 1s ease-out forwards;
+  animation-delay: 0.5s; /* opcional: retraso para que no aparezca de golpe */
+  text-align: center;
+}
+
+@keyframes elevarTexto {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.quienes-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.btn-quienes-somos {
+  background: linear-gradient(135deg);
+  color: rgb(17, 17, 17);
+  padding: 12px 28px;
+  border: 2px solid black;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-quienes-somos:hover {
+  transform: scale(1.05);
+}
+
+
+texto aparece{
+  font-size: 1.5rem;
+  font-weight: 600;
+  animation: aparecer 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Reset general */
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #111;
+}
+
+
+/* ---------------------- */
+/* Navbar estilo vidrio moderno (glassmorphism) */
+/* ---------------------- */
+/* ---------------------- */
+/* Navbar minimalista tipo SpaceX */
+/* ---------------------- */
+/* ---------------------- */
+/* Navbar minimalista tipo SpaceX con adaptación al fondo */
+/* ---------------------- */
+/* ---------------------- */
+/* ---------------------- */
+/* NAVBAR PRINCIPAL VIDRIO */
+/* ---------------------- */
+/* Navbar principal */
+/* ---------------------- */
+/* NAVBAR FIJA CON BLUR Y TRANSPARENCIA */
+/* ---------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+  /* Fondo semi-transparente con blur */
+  background: rgba(7, 7, 7, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Contenedor de logo y links */
+.nav-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* Logo */
+.logo {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: white;
+  z-index: 1100;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* sombra sutil para legibilidad */
+}
+
+/* Links desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.nav-links a:hover {
+  transform: scale(1.05);
+  color: #00bcd4;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1100;
+  transition: color 0.3s ease;
+}
+
+/* NAVBAR LIGHT/DARK DYNAMIC */
+.navbar.light {
+  background: rgba(255, 255, 255, 0.5);
+  color: #111;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar.light .logo,
+.navbar.light .nav-links a,
+.navbar.light .menu-toggle {
+  color: #111 !important;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.5);
+}
+
+.navbar.dark {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.navbar.dark .logo,
+.navbar.dark .nav-links a,
+.navbar.dark .menu-toggle {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* NAV LINKS MÓVIL */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+
+    /* Igualar fondo a la navbar con transparencia y blur */
+    background: rgba(7, 7, 7, 0.4); /* mismo que navbar dark */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    position: absolute;
+    top: 70px; /* altura navbar */
+    left: 0;
+    width: 100vw;
+    padding: 20px 0;
+    margin: 0;
+    z-index: 9999;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: slideDownFade 0.3s ease forwards;
+  }
+
+  .nav-links li {
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    color: white; /* hereda color del navbar dark */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Animación fade + slide */
+@keyframes slideDownFade {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll dinámico */
+.navbar.light .logo,
+.navbar.light .nav-links a,
+.navbar.light .menu-toggle {
+  color: #111;
+}
+
+.navbar.dark .logo,
+.navbar.dark .nav-links a,
+.navbar.dark .menu-toggle {
+  color: white;
+}
+
+.navbar.dark {
+  background: rgba(0,0,0,0.4); /* un poco translúcido sobre el video */
+}
+
+.navbar.dark .logo,
+.navbar.dark .menu-toggle,
+.navbar.dark .nav-links a {
+  color: #fff !important;
+}
+
+/* Estado claro (secciones blancas) */
+.navbar.light {
+  background: rgba(255,255,255,0.9); /* casi blanco */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar.light .logo,
+.navbar.light .menu-toggle,
+.navbar.light .nav-links a {
+  color: #111 !important;
+}
+
+/* -------- NAV-LINKS MÓVIL -------- */
+@media (max-width: 768px){
+
+  /* fondo del menú desplegable en oscuro */
+  .navbar.dark .nav-links {
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  /* fondo del menú desplegable en claro */
+  .navbar.light .nav-links {
+    background-color: rgba(255,255,255,0.95);
+  }
+
+  /* colores de los links dentro del desplegable */
+  .navbar.dark .nav-links a {
+    color: #fff !important;
+  }
+
+  .navbar.light .nav-links a {
+    color: #111 !important;
+  }
+}
+
+
+
+
+.contenedor-superpuesto {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contenedor-superpuesto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.texto-superpuesto {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-family: "Manrope", 'sans-serf';
+  margin: 0;
+  padding: 1rem;
+}
+
+h1 { font-weight: 700; }
+h2 { font-weight: 600; }
+h3 { font-weight: 200; }
+
+/* Footer */
+.footer-text {
+  text-align: center;
+  padding: 60px 20px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Contenedor general */
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Imagen principal */
+.responsive-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Secciones de texto */
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+/* Lista de valores */
+.atributos {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.atributos li {
+  margin-bottom: 8px;
+}
+
+/* Fila de servicio */
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.contenido-text {
+  flex: 1 1 70%;
+}
+
+.contenido-img {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+/* Imágenes personalizadas */
+.imgdata {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.hero-texto {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero-texto h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+
+  /* Hero reducido */
+  .hero-nosotros {
+    height: 200px;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Ajustes de texto superpuesto */
+  .texto-superpuesto {
+    font-size: 1rem;
+    bottom: 10px;
+    padding: 0 10px;
+  }
+
+  /* Navbar */
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none; /* oculto por defecto en móvil */
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #141414;
+    position: absolute;
+    top: 70px;
+    left: 0;          /* cambiado de right:0 a left:0 */
+    width: 100vw;      /* para que no se salga del viewport */
+    padding: 20px 0;   /* padding vertical para espacio */
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Ajustes para fila y textos */
+  .fila {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contenido-text {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .contenido-img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Titulos más pequeños */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+/* Animación de fade + slide para la nav móvil */
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links.show {
+  animation: slideDownFade 0.3s ease forwards;
+}
+
+
+.hero-texto {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.hero-texto h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Responsive: altura y tamaño texto más pequeño en pantallas chicas */
+@media (max-width: 768px) {
+  .hero {
+    height: 200px;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.herotwo {
+  position: relative;
+  width: 100%;
+  height: 300px; /* altura del banner */
+  background-image: url('descarga\ \(4\).jpg'); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.herotwo-texto {
+  position: relative;
+  color: rgb(32, 32, 32);
+  text-align: center;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+}
+.herotwo-texto h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+}
+/* Responsive: altura y tamaño texto más pequeño en pantallas chicas */
+@media (max-width: 768px) {
+  .herotwo {
+    height: 200px;
+  }
+
+  .herotwo-texto h1 {
+    font-size: 1.8rem;
+  }
+}
+/* Sección de precios */
+.pricing-section {
+  background: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 90px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.price {
+  font-size: 1.8em;
+  margin: 15px 0;
+  color: #008cba;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pricing-card ul li {
+  margin: 10px 0;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: #008cba;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #005f7f;
+}
+
+.featured {
+  border: 2px solid #008cba;
+  transform: scale(1.05);
+}
+/* Contenedor general para centrar contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.pricing-section {
+  background: #f8f8f8;
+  padding: 60px 20px; /* ← este "20px" ya da espacio horizontal */
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px); /* se coloca más abajo inicialmente */
+  animation: elevarTexto 1s ease-out forwards;
+  animation-delay: 0.5s; /* opcional: retraso para que no aparezca de golpe */
+  text-align: center;
+}
+
+
+
+@keyframes elevarTexto {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fila-viva {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.fila-viva h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.fila-viva p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contenido-texto {
+  flex: 1 1 50%;
+  min-width: 280px;
+}
+
+.contenido-imagen {
+  flex: 1 1 40%;
+  min-width: 280px;
+  text-align: center;
+}
+
+.contenido-imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.contenido-imagen img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .fila-viva {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contenido-texto, .contenido-imagen {
+    flex: 1 1 100%;
+  }
+
+  .fila-viva h2 {
+    font-size: 1.6rem;
+  }
+
+  .fila-viva p {
+    font-size: 1rem;
+  }
+}
+
+.wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: -5px; /* para que quede bien pegado */
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* …tu CSS actual… */
+
+/* Ajustes responsive extra */
+@media (max-width: 768px) {
+  /* Filas: texto e imagen uno debajo del otro */
+  .fila {
+    flex-direction: column;
+    align-items: flex-start; /* o center si prefieres centrado */
+  }
+
+  .contenido-text {
+    font-size: 1.2rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .contenido-img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Titulos más pequeños */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  /* Contenedor */
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  h1 { font-size: 1.3rem; }
+  h2 { font-size: 1rem; }
+  h3 { font-size: 0.9rem; }
+}
+
+/* Limitar ancho máximo de las cards y hacer que se adapten */
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pricing-card {
+  width: 100%;
+  max-width: 320px; /* así no se estiran demasiado */
+  padding: 30px 20px; /* menos padding para que no se vea tan largo */
+  box-sizing: border-box;
+}
+
+/* Ajuste de listas largas: reduce altura visual */
+.pricing-card ul {
+  max-height: 280px; /* limita altura */
+  overflow-y: auto; /* permite scroll interno si hay mucho contenido */
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+/* Scroll visual más discreto en móviles */
+@media (max-width: 768px) {
+  .pricing-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .pricing-card ul {
+    max-height: none; /* en móvil deja que se ajuste naturalmente */
+  }
+}
+
+/* ---------------------- */
+/* Header Contacto */
+header.contacto-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+header.contacto-header h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+header.contacto-header h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* ---------------------- */
+/* Contact Section */
+#contacto {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: #111;
+    font-size: 1rem;
+    font-family: 'Manrope', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    background: rgba(73, 71, 71, 0.1);
+    box-shadow: 0 0 10px #111111;
+}
+
+#contactForm button {
+  background: linear-gradient(135deg);
+  color: rgb(17, 17, 17);
+  padding: 12px 28px;
+  border: 2px solid black;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#contactForm button:hover {
+    background: #0a0a0a;
+    transform: scale(1.05);
+}
+
+#respuesta {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #080808;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#respuesta.show {
+    opacity: 1;
+}
+
+header.contacto-header {
+  padding-top: 80px;   /* altura de la barra */
+}
+
+/* ---------------------- */
+/* Responsive Contacto */
+@media (max-width: 768px) {
+    #contacto {
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    header.contacto-header h1 {
+        font-size: 2rem;
+    }
+
+    header.contacto-header h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #contacto {
+        padding: 1rem;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        padding: 0.6rem;
+    }
+
+    #contactForm button {
+        width: 100%;
+        padding: 0.8rem;
+    }
+}
+
+/* --- Estilos básicos para el modal --- */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  position: relative;
+  top: 150px; /* altura navbar + margen extra */
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  animation: slideDown 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {background-color: rgba(0,0,0,0);}
+  to {background-color: rgba(0,0,0,0.6);}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-20px); opacity:0;}
+  to {transform: translateY(0); opacity:1;}
+}
+
+/* Estilo básico de los cards */
+.pricing-section {
+  padding: 40px 0;
+}
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.pricing-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+}
+.pricing-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+.pricing-card .btn:hover {
+  background: #444;
+}
+
+/* form interno del modal */
+form label {
+  display: block;
+  margin-top: 10px;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+form button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #eceaea;
+}
+
+section, main, .container {
+  padding-top: 50px; /* Ajusta según la altura real de tu navbar */
+}
+
+.modal-content h1, 
+.modal-content h2, 
+.modal-content h3 {
+  text-align: center;   /* centra el texto dentro del modal */
+  margin: 0 0 20px;     /* margen inferior uniforme */
+}
+
+@font-face {
+    font-family: "Separat Regular";
+    src: url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.eot");
+    src: url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/c7fb97e690c1473593032429cb30b5c5.svg#Separat Regular")format("svg");
+}
+
+.mod-bold{
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #111;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 100vh; 
+  }
+
+  .contenido {
+    padding: 15px;
+    top: 40%; /* más abajo en móviles */
+    transform: translateY(-40%);
+  }
+
+  .contenido h1 {
+    font-size: 1.8rem;
+  }
+
+  .contenido p {
+    font-size: 1rem;
+  }
+
+  .video-fondo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* o ajustalo a la altura que quieras */
+  overflow: hidden;
+}
+
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.texto-animado {
+  opacity: 0;
+  transform: translateY(20px); /* se coloca más abajo inicialmente */
+  animation: elevarTexto 1s ease-out forwards;
+  animation-delay: 0.5s; /* opcional: retraso para que no aparezca de golpe */
+  text-align: center;
+}
+
+@keyframes elevarTexto {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.quienes-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.btn-quienes-somos {
+  background: linear-gradient(135deg);
+  color: rgb(17, 17, 17);
+  padding: 12px 28px;
+  border: 2px solid black;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-quienes-somos:hover {
+  transform: scale(1.05);
+}
+
+
+texto aparece{
+  font-size: 1.5rem;
+  font-weight: 600;
+  animation: aparecer 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Reset general */
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #111;
+}
+
+
+/* ---------------------- */
+/* Navbar estilo vidrio moderno (glassmorphism) */
+/* ---------------------- */
+/* ---------------------- */
+/* Navbar minimalista tipo SpaceX */
+/* ---------------------- */
+/* ---------------------- */
+/* Navbar minimalista tipo SpaceX con adaptación al fondo */
+/* ---------------------- */
+/* ---------------------- */
+/* ---------------------- */
+/* NAVBAR PRINCIPAL VIDRIO */
+/* ---------------------- */
+/* Navbar principal */
+/* ---------------------- */
+/* NAVBAR FIJA CON BLUR Y TRANSPARENCIA */
+/* ---------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+  /* Fondo semi-transparente con blur */
+  background: rgba(7, 7, 7, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Contenedor de logo y links */
+.nav-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* Logo */
+.logo {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: white;
+  z-index: 1100;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* sombra sutil para legibilidad */
+}
+
+/* Links desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.nav-links a:hover {
+  transform: scale(1.05);
+  color: #00bcd4;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1100;
+  transition: color 0.3s ease;
+}
+
+/* NAVBAR LIGHT/DARK DYNAMIC */
+.navbar.light {
+  background: rgba(255, 255, 255, 0.5);
+  color: #111;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar.light .logo,
+.navbar.light .nav-links a,
+.navbar.light .menu-toggle {
+  color: #111 !important;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.5);
+}
+
+.navbar.dark {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.navbar.dark .logo,
+.navbar.dark .nav-links a,
+.navbar.dark .menu-toggle {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* NAV LINKS MÓVIL */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+
+    /* Igualar fondo a la navbar con transparencia y blur */
+    background: rgba(7, 7, 7, 0.4); /* mismo que navbar dark */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    position: absolute;
+    top: 70px; /* altura navbar */
+    left: 0;
+    width: 100vw;
+    padding: 20px 0;
+    margin: 0;
+    z-index: 9999;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: slideDownFade 0.3s ease forwards;
+  }
+
+  .nav-links li {
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    color: white; /* hereda color del navbar dark */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Animación fade + slide */
+@keyframes slideDownFade {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll dinámico */
+.navbar.light .logo,
+.navbar.light .nav-links a,
+.navbar.light .menu-toggle {
+  color: #111;
+}
+
+.navbar.dark .logo,
+.navbar.dark .nav-links a,
+.navbar.dark .menu-toggle {
+  color: white;
+}
+
+.navbar.dark {
+  background: rgba(0,0,0,0.4); /* un poco translúcido sobre el video */
+}
+
+.navbar.dark .logo,
+.navbar.dark .menu-toggle,
+.navbar.dark .nav-links a {
+  color: #fff !important;
+}
+
+/* Estado claro (secciones blancas) */
+.navbar.light {
+  background: rgba(255,255,255,0.9); /* casi blanco */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar.light .logo,
+.navbar.light .menu-toggle,
+.navbar.light .nav-links a {
+  color: #111 !important;
+}
+
+/* -------- NAV-LINKS MÓVIL -------- */
+@media (max-width: 768px){
+
+  /* fondo del menú desplegable en oscuro */
+  .navbar.dark .nav-links {
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  /* fondo del menú desplegable en claro */
+  .navbar.light .nav-links {
+    background-color: rgba(255,255,255,0.95);
+  }
+
+  /* colores de los links dentro del desplegable */
+  .navbar.dark .nav-links a {
+    color: #fff !important;
+  }
+
+  .navbar.light .nav-links a {
+    color: #111 !important;
+  }
+}
+
+
+
+
+.contenedor-superpuesto {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contenedor-superpuesto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.texto-superpuesto {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-family: "Manrope", 'sans-serf';
+  margin: 0;
+  padding: 1rem;
+}
+
+h1 { font-weight: 700; }
+h2 { font-weight: 600; }
+h3 { font-weight: 200; }
+
+/* Footer */
+.footer-text {
+  text-align: center;
+  padding: 60px 20px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Contenedor general */
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Imagen principal */
+.responsive-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Secciones de texto */
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+/* Lista de valores */
+.atributos {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.atributos li {
+  margin-bottom: 8px;
+}
+
+/* Fila de servicio */
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.contenido-text {
+  flex: 1 1 70%;
+}
+
+.contenido-img {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+/* Imágenes personalizadas */
+.imgdata {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hero Nosotros */
+.hero-nosotros {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url('descarga\ \(4\).jpg'); /* Cambiá la imagen según necesites */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-texto {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero-texto h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+
+  /* Hero reducido */
+  .hero-nosotros {
+    height: 200px;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Ajustes de texto superpuesto */
+  .texto-superpuesto {
+    font-size: 1rem;
+    bottom: 10px;
+    padding: 0 10px;
+  }
+
+  /* Navbar */
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none; /* oculto por defecto en móvil */
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #141414;
+    position: absolute;
+    top: 70px;
+    left: 0;          /* cambiado de right:0 a left:0 */
+    width: 100vw;      /* para que no se salga del viewport */
+    padding: 20px 0;   /* padding vertical para espacio */
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Ajustes para fila y textos */
+  .fila {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contenido-text {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .contenido-img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Titulos más pequeños */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+/* Animación de fade + slide para la nav móvil */
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links.show {
+  animation: slideDownFade 0.3s ease forwards;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px; /* altura del banner */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-texto {
+  position: relative;
+  color: rgb(2, 2, 2);
+  text-align: center;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+
+}
+
+.hero-texto h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive: altura y tamaño texto más pequeño en pantallas chicas */
+@media (max-width: 768px) {
+  .hero {
+    height: 200px;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.herotwo {
+  position: relative;
+  width: 100%;
+  height: 300px; /* altura del banner */
+  background-image: url('descarga\ \(4\).jpg'); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.herotwo-texto {
+  position: relative;
+  color: rgb(32, 32, 32);
+  text-align: center;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+}
+.herotwo-texto h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 100;
+}
+/* Responsive: altura y tamaño texto más pequeño en pantallas chicas */
+@media (max-width: 768px) {
+  .herotwo {
+    height: 200px;
+  }
+
+  .herotwo-texto h1 {
+    font-size: 1.8rem;
+  }
+}
+/* Sección de precios */
+.pricing-section {
+  background: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 90px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.price {
+  font-size: 1.8em;
+  margin: 15px 0;
+  color: #008cba;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pricing-card ul li {
+  margin: 10px 0;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: #008cba;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #005f7f;
+}
+
+.featured {
+  border: 2px solid #008cba;
+  transform: scale(1.05);
+}
+/* Contenedor general para centrar contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.pricing-section {
+  background: #f8f8f8;
+  padding: 60px 20px; /* ← este "20px" ya da espacio horizontal */
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px); /* se coloca más abajo inicialmente */
+  animation: elevarTexto 1s ease-out forwards;
+  animation-delay: 0.5s; /* opcional: retraso para que no aparezca de golpe */
+  text-align: center;
+}
+
+
+
+@keyframes elevarTexto {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fila-viva {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.fila-viva h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.fila-viva p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contenido-texto {
+  flex: 1 1 50%;
+  min-width: 280px;
+}
+
+.contenido-imagen {
+  flex: 1 1 40%;
+  min-width: 280px;
+  text-align: center;
+}
+
+.contenido-imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.contenido-imagen img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .fila-viva {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contenido-texto, .contenido-imagen {
+    flex: 1 1 100%;
+  }
+
+  .fila-viva h2 {
+    font-size: 1.6rem;
+  }
+
+  .fila-viva p {
+    font-size: 1rem;
+  }
+}
+
+.wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: -5px; /* para que quede bien pegado */
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* …tu CSS actual… */
+
+/* Ajustes responsive extra */
+@media (max-width: 768px) {
+  /* Filas: texto e imagen uno debajo del otro */
+  .fila {
+    flex-direction: column;
+    align-items: flex-start; /* o center si prefieres centrado */
+  }
+
+  .contenido-text {
+    font-size: 1.2rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .contenido-img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Titulos más pequeños */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  /* Contenedor */
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  h1 { font-size: 1.3rem; }
+  h2 { font-size: 1rem; }
+  h3 { font-size: 0.9rem; }
+}
+
+/* Limitar ancho máximo de las cards y hacer que se adapten */
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pricing-card {
+  width: 100%;
+  max-width: 320px; /* así no se estiran demasiado */
+  padding: 30px 20px; /* menos padding para que no se vea tan largo */
+  box-sizing: border-box;
+}
+
+/* Ajuste de listas largas: reduce altura visual */
+.pricing-card ul {
+  max-height: 280px; /* limita altura */
+  overflow-y: auto; /* permite scroll interno si hay mucho contenido */
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+/* Scroll visual más discreto en móviles */
+@media (max-width: 768px) {
+  .pricing-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .pricing-card ul {
+    max-height: none; /* en móvil deja que se ajuste naturalmente */
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#envyra-contacts {
+    margin-top: 120px; /* deja espacio debajo de la navbar */
+}
+
+.contenido-text i {
+  margin-right: 10px; /* ajustá el espacio que quieras */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 30vh; /* usa % del alto, no píxeles fijos */
+    margin-bottom: 60px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    box-sizing: border-box;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 7vw, 45px); /* escala automática entre 28 y 45px */
+    line-height: 1.2;
+    word-wrap: break-word; /* evita que el texto se salga */
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>ENVYRA | Elevando ideas al mundo digital</title>
+
+  <link rel="shortcut icon" href="image.ico" type="image/x-icon">
+
+  <!-- Fuentes y estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">ENVYRΛ</div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="presentación.html">Presentación</a></li>
+        <li><a href="contacttwo.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <header>
+    <div class="banner">
+      <video autoplay muted loop playsinline class="video-fondo">
+        <source src="backgroundvideo.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
+      <div class="contenido">
+        <h1 class="texto-animado">Elevando ideas al mundo digital.</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section data-aos="fade-up">
+      <h5 style="text-align: center; font-family: 'Manrope', sans-serif;">
+        ENVYRΛ <strong>presenta</strong>
+      </h5>
+      <h1 style="text-align: center;">HyperQual</h1>
+    </section>
+
+    <section data-aos="fade-up">
+      <h3>
+        En ENVYRA hemos desarrollado HyperQual™, un modelo exclusivo que redefine los estándares tradicionales en cuanto a tiempo, calidad y <strong>resultados en el desarrollo tecnológico</strong>.
+      </h3>
+      <h3>
+        Mientras muchas organizaciones requieren semanas para completar sus proyectos, nosotros garantizamos entregas en plazos significativamente reducidos, sin comprometer los más altos niveles de precisión, diseño y funcionalidad.
+      </h3>
+      <h3>
+        HyperQual™ trasciende la simple metodología de trabajo; representa una verdadera filosofía de ejecución rigurosa y eficiente, orientada a alcanzar la excelencia desde el primer instante.
+      </h3>
+    </section>
+  </main>
+
+  <!-- Quiénes somos -->
+  <section class="quienes-section">
+    <a href="presentación.html" class="btn-quienes-somos">¿Quiénes somos?</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">&copy; 2025 ENVYRA™. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Cerrar menú cuando se clickea un enlace (ideal en móviles)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,       // duración de la animación en ms
+      easing: 'ease-in-out', // tipo de easing
+      once: true            // animar solo una vez al hacer scroll
+    });
+  </script>
+
+  <script>
+    const navbar = document.querySelector('.navbar');
+    const changePoint = 500; // píxeles donde cambia a fondo claro
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > changePoint) {
+        navbar.classList.add('light');
+        navbar.classList.remove('dark');
+      } else {
+        navbar.classList.add('dark');
+        navbar.classList.remove('light');
+      }
+    });
+
+    // Inicializa con dark
+    navbar.classList.add('dark');
+  </script>
+</body>
+</html>
