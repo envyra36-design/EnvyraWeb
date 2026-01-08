@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | ENVYRΛ™</title>
+    <link rel="shortcut icon" href="image.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #fff; 
+            color: #1d1d1f;
+        }
+        .logo-envyra {
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            font-size: 1.5rem;
+        }
+        .project-image-container {
+            overflow: hidden;
+            border-radius: 24px;
+            background-color: #f5f5f7;
+        }
+        .project-image-container img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: grayscale(20%);
+        }
+        /* Cambio sutil al pasar el mouse por toda la tarjeta */
+        .project-card:hover .project-image-container img {
+            transform: scale(1.03);
+            filter: grayscale(0%);
+        }
+        .project-card:hover h2 {
+            color: #000;
+        }
+        .text-legendary {
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="logo-envyra">ENVYRΛ</div>
+            <ul class="hidden md:flex space-x-8 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500">
+                <li><a href="index.html" class="hover:text-black transition">Inicio</a></li>
+                <li><a href="configurar.html" class="hover:text-black transition">Configurar</a></li>
+            </ul>
+            <a href="index.html" class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-black transition">✕</a>
+        </div>
+    </nav>
+
+    <main class="pt-32">
+        <header class="max-w-7xl mx-auto px-6 mb-20" data-aos="fade-up">
+            <span class="text-[10px] font-extrabold tracking-[0.4em] text-gray-400 uppercase block mb-4">Archivo de Visión</span>
+            <h1 class="text-5xl md:text-7xl text-legendary mb-6">Proyectos Seleccionados.</h1>
+            <p class="max-w-2xl text-xl text-gray-500 font-medium">Una muestra de cómo transformamos líneas de código en ventajas competitivas.</p>
+        </header>
+
+        <section class="max-w-7xl mx-auto px-6 space-y-24 pb-32">
+            
+            <a href="https://envyra36-design.github.io/Airswipe/" class="project-card grid md:grid-cols-2 gap-12 items-center group block" data-aos="fade-up">
+                <div class="project-image-container aspect-[4/3]">
+                    <img src="demo.jpg" alt="Aura Home" class="w-full h-full object-cover">
+                </div>
+                <div class="space-y-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Desarrollo Web</span>
+                    <h2 class="text-4xl text-legendary transition-colors">AirSwipe</h2>
+                    <p class="text-gray-500 text-lg leading-relaxed font-medium">
+                        Diseñado para sentirse natural.
+                        Una experiencia fluida donde la tecnología acompaña, no interrumpe.
+                    </p>
+                    <div class="pt-4">
+                        <span class="text-[11px] font-bold uppercase tracking-widest border-b-2 border-black pb-1">Ver proyecto online</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://envyra36-design.github.io/STORMB1/" class="project-card grid md:grid-cols-2 gap-12 items-center group block" data-aos="fade-up">
+                <div class="project-image-container aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200" alt="STORM B1" class="w-full h-full object-cover">
+                </div>
+                <div class="space-y-6">
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Innovación tecnológica</span>
+                    <h2 class="text-4xl text-legendary transition-colors">STORM B1</h2>
+                    <p class="text-gray-500 text-lg leading-relaxed font-medium">
+                        Sistema avanzado de monitoreo y predicción de riesgos climáticos para infraestructura eléctrica. 
+                        Mediante el motor de cálculo Storm Black Index (SBI), transformamos datos satelitales en decisiones estratégicas.
+                    </p>
+                    <ul class="text-[11px] font-bold text-gray-400 uppercase tracking-tighter space-y-1">
+                        <li>• Procesamiento de Variables Críticas</li>
+                        <li>• Motor de Cálculo Propietario </li>
+                        <li>• Análisis de Riesgo Milimétrico</li>
+                    </ul>
+                    <div class="pt-4">
+                        <span class="text-[11px] font-bold uppercase tracking-widest border-b-2 border-black pb-1">Ver proyecto online</span>
+                    </div>
+                </div>
+            </a>
+
+        </section>
+
+        <footer class="bg-gray-50 py-32 text-center">
+            <h2 class="text-4xl text-legendary mb-8">¿Construimos tu visión?</h2>
+            <a href="configurar.html" class="inline-block bg-black text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition">Empezar ahora</a>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ENVYRA™ | Sobre Nosotros</title>
+    <link rel="shortcut icon" href="image.ico" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="style.css" /> 
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ENVYRΛ</div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="presentación.html">Presentación</a></li>
+                <li><a href="contacttwo.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero light-bg" style="height: 30vh; display: flex; align-items: center;"> 
+        <div class="container">
+            <h1>Acerca de ENVYRA™</h1>
+        </div>
+    </section>
+
+    <main>
+        <section class="light-bg" style="padding-top: 50px;"> 
+            <div class="container presentation-intro">
+                
+                <h3 data-aos="fade-up" data-aos-delay="100">
+                    ENVYRΛ™ es una marca innovadora nacida con un propósito claro: resolver problemas reales, automatizar procesos complejos, ofrecer calidad superior y hacer accesibles estas soluciones a todo tipo de usuarios.
+                </h3>
+                <h3 data-aos="fade-up" data-aos-delay="200">
+                    Nuestra filosofía se basa en una premisa simple pero poderosa: la calidad no debe ser un privilegio, debe ser un estándar. Por eso, en cada proyecto que asumimos, nuestro compromiso es brindar productos digitales funcionales, eficientes y estratégicamente pensados para generar valor concreto.
+                </h3>
+                <h3 data-aos="fade-up" data-aos-delay="300">Somos <strong>visionarios</strong></h3>
+                <h3 data-aos="fade-up" data-aos-delay="400">Somos <strong>arriesgados</strong></h3>
+                <h3 data-aos="fade-up" data-aos-delay="500">Somos <strong>el futuro del desarrollo.</strong></h3>
+            </div>
+        </section>
+
+        <div class="light-bg" style="padding-top: 0;">
+
+            <section class="fila-viva container" data-aos="fade-up">
+                <div class="contenido-texto">
+                    <h3><strong>Desarrollo web</strong></h3>
+                    <h3>Creamos sitios, plataformas y sistemas web de alto rendimiento, con diseños atractivos, interfaces intuitivas y estructuras escalables.</h3>
+                </div>
+                <div class="contenido-imagen">
+                    <img src="undraw_website_zbig.svg" alt="Imagen ilustrativa">
+                </div>
+            </section>
+
+            <section class="fila-viva container" data-aos="fade-up">
+                <div class="contenido-texto">
+                    <h3><strong>Desarrollo de software de escritorio (PC)</strong></h3>
+                    <h3>Desarrollamos aplicaciones descargables, rápidas, seguras y robustas, orientadas a optimizar procesos internos y automatizar tareas específicas.</h3>
+                </div>
+                <div class="contenido-imagen">
+                    <img src="undraw_code-review_jdgp.svg" alt="">
+                </div>
+            </section>
+
+            <section class="fila-viva container" data-aos="fade-up">
+                <div class="contenido-texto">
+                    <h3><strong>Innovación tecnológica y científica</strong></h3>
+                    <h3>Esta es nuestra unidad más disruptiva. Aquí investigamos, experimentamos y desarrollamos ideas orientadas al futuro.</h3>
+                </div>
+                <div class="contenido-imagen">
+                    <img src="undraw_ai-agent_pdkp.svg" alt="">
+                </div>
+            </section>
+
+        </div>
+        
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2025 ENVYRA™. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+
+</body>
+</html>
